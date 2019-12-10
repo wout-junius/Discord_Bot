@@ -90,6 +90,7 @@ bot.on('ready', () => {
                 suggestGame(args, msg);
                 break;
 
+            //gives all the commands of the bot    
             case 'help':
                 embed.setTitle("Commands").setColor(color).setDescription("\n   -__Random meme__  =>meme\n   -__define__ =>define [term]\n   -__game__ =>game [game titel]\n   -__suggest__ =>suggest [game]\n   -__wheather__  =>wheather [place]");
                 msg.channel.send(embed);
