@@ -6,23 +6,25 @@ simply a little project of mine to work in nodejs and have a bot for my server
 
 ## Commands
 
-* Random meme  =>meme
-    * gives a random meme
+### <u> Memes</u>
+Cammand:  ``` Random meme  =>meme```
+* gives a random meme
 
-* define =>define [term] 
+### <u>Urban Dictionary</u>
 
-    * Defines the term by the urban dictionaty api
+Cammand:  ``` define =>define [term] ``` 
+* Defines the term by the urban dictionary api
 
-* game =>game [game titel]
+### <u>Game Info </u>
+Cammand:  ```game =>game [game titel]```
+* Gives info of the game
 
-    * Gives info of the game
-    
-* suggest =>suggest [game]
+### <u>Suggestion</u>
+Cammand:  ```suggest =>suggest [game]```
+* Gives game suggestions by a game you give it
 
-    * Gives game suggestions by a game you give it
-
-*   wheather  =>wheather [place]
-
-    * Give teh wheather of a place
+### <u>Wheather</u>
+Cammand:  ```wheather  =>wheather [place]```
+* Give teh wheather of a place
 
 
