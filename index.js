@@ -14,19 +14,12 @@ let embed = new Discord.RichEmbed()
     .setColor(color)
     .setDescription('Invalid command! use `=>help` for a list of commands!');
 
+let field = new Array(3);
+
 //Constants
 const bot = new Discord.Client();
 const token = 'NjIwOTgyNTM0NDY5MDU4NTY5.XXetYg.0U7Jo2kyji2rnnfWlcoQ8APQ8SM';
 const PREFIX = '=>';
-
-let tictactoe = `
->>> \`\`\`
-   1 2 3
-a |_|_|_|
-b |_|_|_|
-c |_|_|_|
-\`\`\`
-`;
 
 
 function sleep(ms) {
@@ -90,9 +83,15 @@ bot.on('ready', () => {
                 suggestGame(args, msg);
                 break;
 
+            case 'tictactoe':
+
+                
+
+
+            break;
             //gives all the commands of the bot    
             case 'help':
-                embed.setTitle("Commands").setColor(color).setDescription("\n   -__Random meme__  =>meme\n   -__define__ =>define [term]\n   -__game__ =>game [game titel]\n   -__suggest__ =>suggest [game]\n   -__wheather__  =>wheather [place]");
+                embed.setTitle("Commands").setColor(color).setDescription("\n   -__Random meme__  =>meme\n   -__define__ =>define [term]\n   -__game__ =>game [game titel]\n   -__suggest__ =>suggest [game]\n   -__weather__  =>weather [place]");
                 msg.channel.send(embed);
                 break;
         }
@@ -286,8 +285,29 @@ function clear(args, msg) {
                     .catch(console.error);
 }
 
+function tictactoe(args, msg, field){
 
+    
+    field[args[0].substring(0,1),args[0].substring(1,1)] = args[1];
+    let tictactoe = `
+    >>> \`\`\`
+      1 2 3
+   a |${field[0,0]}|${field[0,1]}|${field[0,2]}|
+   b |${field[1,0]}|${field[1,1]}|${field[1,2]}|
+   c |${field[2,0]}|${field[2,1]}|${field[2,2]}|
+   \`\`\`
+   `
+    embed.setdescription(tictactoe).setColor(color).setTitle("Tic Tac toe");
+    msg.channel.send(embed);
+}
 
+function reset(field){
+    for(let i = 0; i < 3; i++){
+        for(let j = 0; i < 3; i++){
+            field[i,j] = '_';
+        }
+    }
+}
 
 async function messaged(number, msg){
     embed.setTitle('Clear').setColor(color).setDescription(`Cleard ${number} messages.`);
