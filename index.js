@@ -2,12 +2,12 @@
 //Modules
 const Discord = require('discord.js');
 let unirest = require('unirest');
-let music = require('musicmatch')({ apikey: "325994ded9689accf6ace2c047f25a34" });
+let music = require('musicmatch')({ apikey: "" });
 let fetch = require('node-fetch');
 const ud = require('urban-dictionary')
 
-let appid = "7ac5fe320ab084caa7abd9b04e0271a8";
-let apikey = "ec7b16e49d93689aec62649c6b758c60";
+let appid = "";
+let apikey = "";
 const color = 0xED203F;
 let embed = new Discord.RichEmbed()
     .setTitle('Error')
@@ -18,7 +18,7 @@ let field = new Array(3);
 
 //Constants
 const bot = new Discord.Client();
-const token = 'NjIwOTgyNTM0NDY5MDU4NTY5.XXetYg.0U7Jo2kyji2rnnfWlcoQ8APQ8SM';
+const token = '';
 const PREFIX = '=>';
 
 
