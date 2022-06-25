@@ -11,7 +11,7 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "musicmatch": "^0.3.2",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "nodejs": "0.0.0",
     "unirest": "^0.6.0",
     "urban-dictionary": "^2.2.1",
